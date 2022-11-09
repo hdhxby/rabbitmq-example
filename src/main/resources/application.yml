@@ -1,0 +1,15 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
+  cloud:
+    stream:
+      bindings:
+        input:
+          destination: helloExchange #约定交换机通道名
+        output:
+          destination: helloExchange #约定交换机通道名
+        helloWorld:
+          destination: helloWorldExchange #约定交换机通道名
